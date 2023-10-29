@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="heading">Unleash Your Creativity !!! </div>
+    <div class="subheading">Made By :- ABHAY</div>
+    
+
+
+
+    <script>
+        const body = document.querySelector('body');
+        body.setAttribute('style', 'display:flex;');
+        body.style.flexDirection = "column";
+        body.style.alignItems = "center"; 
+       
+        let a = prompt('Please Enter The Size (ex :- 32, means grid of 32x32)');
+        let gridsize = parseInt(a);
+
+        for(let i = 0; i< gridsize; i++){
+
+            const superdiv = document.createElement('div');
+            superdiv.setAttribute('id', 'horizontalbox');
+            body.appendChild(superdiv);
+            superdiv.setAttribute('style', 'display:flex;')
+           
+            
+
+            for(let ii = 0; ii< gridsize; ii++){
+                const subdiv = document.createElement('div');
+                subdiv.classList.add('subdiv');
+                superdiv.appendChild(subdiv);
+                console.log('added');
+
+                function changecolortoblack() {
+                  subdiv.style.backgroundColor = 'black';
+                  console.log('it was clicked');
+                };
+
+                function changecolortowhite() {
+                  subdiv.style.backgroundColor = 'white';
+                  console.log('it was dblclicked');
+                };
+
+
+                if(gridsize <= 25){
+                    subdiv.setAttribute('style', 'border: 1px dotted black; min-width:40px; min-height:40px;');
+
+                }else if(gridsize > 25 && gridsize < 100){
+                    subdiv.setAttribute('style', 'border: 1px dotted black; min-width:30px; min-height:30px;');
+
+                }else {
+                    subdiv.setAttribute('style', 'border: 1px dotted black; min-width:30px; min-height:30px;');
+                };
+                subdiv.addEventListener('click', changecolortoblack);
+                //subdiv.addEventListener('', changecolortowhite);
+
+               
+
+
+               
+            };
+            console.log('hadded');
+
+            
+
+
+
+        };
+
+        
+        
+
+
+        
+
+      
+
+
+
+
+    </script>
+</body>
+</html>

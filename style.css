@@ -1,0 +1,20 @@
+.heading{
+
+    color: aquamarine;
+    font-size: 50px;
+    font-weight: bolder;
+    
+    margin-bottom: 40px;
+    margin-top: 30px;
+    background-color: black;
+    padding: 20px;
+    border-radius: 20;
+    
+}
+.subheading{
+    color: rgb(238, 33, 6);
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}   
+    
